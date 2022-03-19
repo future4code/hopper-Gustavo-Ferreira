@@ -82,12 +82,33 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
    
+    let primeirosNumerosPares = []
+    let ref = 0
+    while (primeirosNumerosPares.length < n) {
+        
+        if (ref % 2 === 0) {
+            primeirosNumerosPares.push(ref)
+        }
+            ref ++
+    }
+        return primeirosNumerosPares
 }
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
 
+     let resultado
+    if (ladoA === ladoB && ladoB === ladoC) {
+        resultado = "Equilátero"
+    } else if( ladoA === ladoB || ladoB === ladoC || ladoA === ladoC ) {
+        resultado = "Isósceles"
+    } else {
+        resultado = "Escaleno"
+    }
+
+    return resultado
 }
+console.log(resultado)
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
