@@ -41,6 +41,13 @@ function retornaNumerosPares(array) {
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
     
+    let numerosPares = array.filter((valor,indice) => {
+        return valor % 2 === 0
+    })
+    let numerosParesAoQuadrado = numerosPares.map((valor, indice) =>{
+        return valor * valor 
+    })
+    return numerosParesAoQuadrado
   
 }
 
