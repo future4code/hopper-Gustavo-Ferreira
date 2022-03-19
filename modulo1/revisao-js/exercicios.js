@@ -30,7 +30,11 @@ function retornaArrayOrdenado(array) {
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
   
-    
+    let numerosPares = array.filter((valor,indice) => {
+        return valor % 2 === 0
+    })
+
+  return numerosPares
 
 }
 
