@@ -150,13 +150,22 @@ function retornaPessoasAutorizadas(pessoas) {
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  
+
+    const pessoasNaoAutorizadas = pessoas.filter ((pessoa, indice) =>{
+        return pessoa.idade <= 14 || pessoa.idade >= 60 || pessoa.altura <= 1.5 
+    })
+     return pessoasNaoAutorizadas
+
 }
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
 
-}
+    const saldoAtualizado = contas.map((conta)=>{
+        return {...conta, saldoTotal: conta.saldoTotal - conta.compras[0]-conta.compras[1]-conta.compras[2], compras:[]}
+    })
+    return saldoAtualizado
+} 
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
