@@ -108,7 +108,7 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
     return resultado
 }
-console.log(resultado)
+
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
@@ -178,7 +178,7 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
     
-    
+    const ordemPorData = consultas.sort((a,b)=>{return a.dataDaConsulta.split(`/`).reverse().join(`-`).localeCompare(b.dataDaConsulta.split(`/`).reverse().join(`-`) )}) 
 
-
+    return ordemPorData
 }
