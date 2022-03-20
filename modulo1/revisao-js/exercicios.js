@@ -113,8 +113,18 @@ console.log(resultado)
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
   
-}
+    let segundoMaiorESegundoMenor = []
+    
+    array.sort(function (a,b){return a - b})
+    let segundoMaior = array[1]
 
+    let segundoMenor = array[array.length-2] 
+    
+    segundoMaiorESegundoMenor.push(segundoMenor,segundoMaior)
+    
+    return segundoMaiorESegundoMenor
+} 
+  
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
    
