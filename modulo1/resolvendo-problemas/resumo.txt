@@ -1,0 +1,18 @@
+Resumo
+
+o primeiro passo, ter atenção no enunciado, vai fazer toda a difença nos passos seguintes, geralmente é nessa
+etapa que temos os primeiros contatos com as informações que serão a base do nosso codigo, que seria o segundo passo,
+retirar todas as informações importantes, nesse passo vamos alguns nomes de funções e variaveis. O terceiro
+passo consiste em começar a pensar nas entradas e saidas do nosso codigo, quais tipos de informações vamos receber e 
+o que temos que fazer com elas. Junto desse terceiro passo, podemos iniciar o quarto, que seria colocar no papel como
+devemos tratar as informações que iremos receber, fazer um fluxograma vai ajudar a pensar quais ações teremos que 
+fazer no nosso codigo para chegar-mos no resultado, ou seja, elaborarmos um plano inicial. Com um plano em mãos, podemos 
+iniciar o nosso codigo, e nesse primeiro momento temos que ter em mente que precisamos de algo que rode, então ao inves
+de ficar pensando em nomes de variaveis e funções, podemos ir escrevendo o que cada uma vai fazer e ir atribuindo valores
+ou papéis ate conseguir estruturar o nosso código. Depois de ter a estrutura podemos dar uma organizada inicial até que
+fique executavel e partir para o proximo passo que é executar o nosso codigo e iniciar os testes. Caso não tenhamos sucesso
+nessa etapa, é interesante revisar todos os passos anteriores e tentar novamente ate termos um codigo rodavel que resolva
+nosssa tarefa. Com o exito no ultimo passo, podemos proseguir com a refatoração, aqui nós vamos tentar deixar o nosso codigo
+mais organizado e limpo, algo que outra pessoa possa pegar e ententer nossa logica tambem, se atentando ao nome das
+variaveis e funções e talvez mudando alguns passos para simplificar o codigo, deixar comentários em pontos estrategicos
+do codigo tambem é uma boa ideia.
