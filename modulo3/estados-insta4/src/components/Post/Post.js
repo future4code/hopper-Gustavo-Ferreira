@@ -45,8 +45,11 @@ class Post extends React.Component {
     curtido: false,
     numeroCurtidas: 0,
     comentando: false,
-    numeroComentarios: 0
-  }
+    numeroComentarios: 0,
+    nomeUsuario: "",
+    fotoUsuario: "",
+    fotoPost: ""
+  } 
 
   onClickCurtida = () => {
     console.log('Curtiu!')
@@ -66,6 +69,8 @@ class Post extends React.Component {
   }
 
   render() {
+    const listaDePostagens = {}
+    
     let iconeCurtida
 
     if(this.state.curtido) {
@@ -81,6 +86,19 @@ class Post extends React.Component {
     }
 
     return <PostContainer>
+      <div><input
+      placeholder='Nome Do Usuario'
+      />
+      <input
+      placeholder='Foto do perfil'
+      />
+      <input
+      placeholder='Foto Do Post'
+      />
+      </div>
+      
+      <button>Adicionar</button>
+      <div>
       <PostHeader>
         <UserPhoto src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
         <p>{this.props.nomeUsuario}</p>
@@ -102,7 +120,9 @@ class Post extends React.Component {
         />
       </PostFooter>
       {componenteComentario}
+      </div>
     </PostContainer>
+    
   }
 }
 
