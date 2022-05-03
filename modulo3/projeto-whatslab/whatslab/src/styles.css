@@ -1,0 +1,42 @@
+.appConteiner {
+height: 600px;
+margin-left: 30%;
+margin-right: 30%;
+border-width: 2px;
+border-style: solid;
+
+
+
+}
+.campo{
+   display: flex;
+   justify-content: center;
+   margin-left: 2%;
+   margin-right: 2%;
+}
+
+.Tela {
+height: 95%;
+display: flex;
+align-items:flex-end;
+
+}
+.Tela p{
+ margin: 0px;
+ 
+}
+
+.usuario{
+width: 15%;
+
+}
+
+.mensagem{
+width: 75%;
+
+}
+
+.enviar{
+width: 10%;
+
+}
