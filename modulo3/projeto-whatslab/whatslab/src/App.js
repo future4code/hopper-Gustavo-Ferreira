@@ -5,6 +5,8 @@ import "./styles.css"
 
 
 
+
+
 class BarraDeMensagens extends React.Component{
 state = {
     pessoas: [
@@ -57,13 +59,21 @@ limpaCampo = () =>{
 render(){
 
     const listaDeMensagens = this.state.pessoas.map((pessoas) =>{
-    return (
-        <div> 
-            <p>{pessoas.usuario}</p> 
-            <p> {pessoas.mensagem}</p> 
-        </div>
-        
-    );
+    if (pessoas.usuario === "eu"){
+        return (
+            <div className="eu"> 
+                <p> {pessoas.mensagem}</p> 
+            </div> ) 
+    } else if(pessoas.usuario !== ""){
+        return (
+            <div className="outro"> 
+                <p className="remetente">{pessoas.usuario}</p> 
+                <p> {pessoas.mensagem}</p> 
+            </div>
+            
+        );
+    }
+    
     }
     
     
