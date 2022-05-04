@@ -7,30 +7,42 @@ import Etapa3 from './components/Etapa3';
 import EtapaFinal from './components/EtapaFinal';
 import styled from 'styled-components';
 
-const Form = styled.div
+const Form = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+
+`
 
 
 class App extends React.Component {
   state = {
     etapa: 1,
   }
-  RenderizaEtapa = () => {
-    if (this.state.etapa == 1) {
-      return <Etapa1/>
-    } else if (this.state.etapa == 2) {
-      return <Etapa2/>
-    } else if(this.state.etapa == 3) {
-      return <Etapa3/>
-    } else {
-      return <EtapaFinal/>
+  renderizaEtapa = () => {
+    switch (this.state.etapa){
+      case 1:
+        return <Etapa1/>
+        break
+        case 2:
+        return <Etapa2/>
+        break
+        case 3:
+        return <Etapa3/>
+        break
+        default: 
+        return <EtapaFinal/>
+      break        
+      
     }
 
 
     };
 
     irParaProximaEtapa = () =>{
-        const adEtapa = Number(this.state.etapa)+1
-        this.setState({etapa:adEtapa.toString()})
+        const adEtapa = this.state.etapa+1
+        this.setState({etapa:adEtapa})
     }
     
 
@@ -38,12 +50,12 @@ class App extends React.Component {
       
     
     return (
-      <div>
+      <Form>
         
-        {this.RenderizaEtapa()}
-        <button onClick={this.irParaProximaEtapa()}>Proxima etapa</button>
+        {this.renderizaEtapa()}
+        <button onClick={this.irParaProximaEtapa}>Proxima etapa</button>
         
-      </div>
+      </Form>
     )}
   }
 export default App;
