@@ -1,14 +1,7 @@
 import React from 'react';
 import IntegracaoApi from './IntegracaoApi'
 import AddUsuario from './AddUsuario';
-import styled from 'styled-components'
-
-const header = styled.div`
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-align-items:center
-`
+import './App.css'
 
 
 class App extends React.Component {
@@ -46,7 +39,9 @@ class App extends React.Component {
     <h2>Lista de usuarios</h2>
     <button onClick={this.abreAddUser}>adcionar usuario</button>
     </header>
+    <div className='lista'>
     {this.renderizaTela()}
+    </div>
     </div>
   );
 }}

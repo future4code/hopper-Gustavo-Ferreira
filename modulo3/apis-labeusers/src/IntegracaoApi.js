@@ -13,7 +13,7 @@ state ={
     pegaUsuarios = () =>{
 
         axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users',{
-      headers:{Authorization:'Gustavo-Anjos-Hopper'}
+      headers:{Authorization:"Gustavo-Anjos-Hopper"}
       })
       .then((response)=>{this.setState({users:response.data})})
       .catch((error)=>{console.log(error.response.data)})
@@ -21,10 +21,10 @@ state ={
     deletaUsuario = (id) =>{
         const pathParam = id
 
-        axios.del(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/:${id}`,{
-            headers:{Authorization:'Gustavo-Anjos-Hopper'}  
+        axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`,{
+            headers:{Authorization:"Gustavo-Anjos-Hopper"}  
         })
-        .then((response)=>{alert("Usuario deletado com sucesso!")})
+        .then((response)=>{this.pegaUsuarios()})
         .catch((error)=>{alert("Erro ao tentar deletar usuario!")})
     
     }
@@ -35,7 +35,7 @@ state ={
 render(){
 
 const renderizaListaDeUsuarios = this.state.users.map((user)=>{
-    return <div><p>{user.name}</p><button onClick={this.deletaUsuario(user.id)}>Delete</button></div>
+    return <div><h4>{user.name}</h4><button onClick={()=>this.deletaUsuario(user.id)}>Delete</button></div>
 
 })
 

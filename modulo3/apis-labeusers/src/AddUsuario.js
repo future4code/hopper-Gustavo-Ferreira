@@ -46,8 +46,8 @@ render(){
 
 return(
 <div>
-<input onChange={this.onChangeInputName} value={this.state.inputName} />
-<input onChange={this.onChangeInputEmail} value={this.state.inputEmail}  />
+<input placeholder='Nome' onChange={this.onChangeInputName} value={this.state.inputName} />
+<input placeholder='Email' onChange={this.onChangeInputEmail} value={this.state.inputEmail}  />
 <button onClick={this.addUser}>Criar novo usuario</button>
 </div>
 
