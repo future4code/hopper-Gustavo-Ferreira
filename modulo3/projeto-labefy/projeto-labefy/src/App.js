@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import axios from 'axios'
 import Listadeplaylist from './Components/Listadeplaylist';
 import Musicasdaplaylist from './Components/Musicasdaplaylist';
+import AdicionaPlaylist from './Components/AdicionaPlaylist'
 import Header from './Components/Header';
 
 
@@ -19,6 +20,7 @@ class App extends React.Component {
   return (
     <div>
       <Header/>
+      <Listadeplaylist/>
     </div>
   );
 }}

@@ -15,8 +15,8 @@ state = {
             <div>
                 <header className="header">
                     <div className="logo">
-                        <img className="play" src="https://cdn.icon-icons.com/icons2/2024/PNG/512/music_player_play_icon_123828.png"></img>
-                        <p>LabeFy</p>
+                        <img className="play" src={Logo}></img>
+                        <h3>LabeFy</h3>
                     </div>
                     <input></input>
                     <input type="checkbox" id="toggle"></input>

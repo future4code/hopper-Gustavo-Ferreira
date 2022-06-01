@@ -55,3 +55,16 @@
       background-color: #346acf;
       transform: translateX(50px) rotate(360deg);
   }
+
+  .imgplaylist{
+      width: 90px;
+      height: 90px;
+  }
+
+  .listadeplaylists{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,auto));
+    gap:1.5rem
+  }
+
+  
