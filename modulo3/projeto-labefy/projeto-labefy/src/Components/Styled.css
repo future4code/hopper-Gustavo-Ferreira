@@ -1,0 +1,70 @@
+.header{
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.play{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+#toggle{
+    display: none;
+  }
+  
+  .button{
+    display: inline-block;
+    width: 90px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 25px;
+  }
+
+  .button::after{
+      content: url('./Imagens/Sol.png');
+      width: 40px;
+      height: 40px;
+      background-color: #fae902;
+      border: 2px solid #fff;
+      border-radius: 50%;  
+      box-shadow: 0 0 5px rgba(0,0,0,.25);
+      position: absolute;
+      top: -5px; 
+      left: 0;
+      display: grid;
+      place-content: center;
+      line-height: 0;
+      transition: backgroud-color 1s, transform 1s ease-in; 
+  }
+
+  #toggle:checked+.button::after{
+      content: url('./Imagens/Lua.png');
+      background-color: #346acf;
+      transform: translateX(50px) rotate(360deg);
+  }
+
+  .imgplaylist{
+      width: 90px;
+      height: 90px;
+  }
+
+  .listadeplaylists{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,auto));
+    gap:1.5rem
+  }
+
+  
