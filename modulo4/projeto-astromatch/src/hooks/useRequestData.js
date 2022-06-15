@@ -1,7 +1,7 @@
 import axios from "axios"
 import React, {useState, useEffect} from "react"
 
-export function useRequestData(url){
+export function useRequestData(url,x){
     const [isLoading,setIsLoading] = useState(false)
     const [data,setData] = useState(undefined)
     const [error,setError] = useState("")
@@ -9,6 +9,10 @@ export function useRequestData(url){
     useEffect(()=>{
         novoData()
     },[])
+
+    useEffect(()=>{
+        novoData()
+    },[x])
     
     const novoData = () =>{
         setIsLoading(true)

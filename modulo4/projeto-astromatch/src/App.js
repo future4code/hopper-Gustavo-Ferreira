@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import React, {useState,useEffect} from 'react';
 import axios from 'axios';
 import './App.css';
@@ -16,17 +15,25 @@ const escolheDeTela = (x) =>{
 
 const mudaTela = (value) =>{setTela(value)}
 
-
+const limpaMatchs = () =>{
+  axios
+  .put("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/Gustavo-Anjos-Hopper/clear")
+  .then((res)=>{alert('Seu historico de matches foi apagado!')})
+  .catch((err)=>{console.log(err)})
+}
   
   return (
-    <div>
-      <section>
+    <div className='main'>
+      <main className='tela'>
+      <section className='header'>
             <button onClick={()=>mudaTela(true)}>Pretendentes</button>
             <h2>AstroMatch</h2>
             <button onClick={()=>mudaTela(false)}>Matchs</button>
       </section>
       {escolheDeTela(tela)}
-      <button>Limpar matchs e swipes</button>
+      <button onClick={limpaMatchs}>Limpar matchs e swipes</button>
+      </main>
+
     </div>
   );
 }
