@@ -1,0 +1,16 @@
+.img{
+    height: 80%;
+    width: 89%;
+    padding: 5% 5%;
+}
+.imgmatchs{
+    height: 80px;
+    width: 80px;
+}
+
+.matchs{
+    
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
