@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/static/js/main.3c4fcbf7.js",
+    "static/media/bg-tarot-simbols.jpg": "/static/media/bg-tarot-simbols.3dc97fab5416dba94051.jpg",
+    "index.html": "/index.html",
+    "main.3c4fcbf7.js.map": "/static/js/main.3c4fcbf7.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.3c4fcbf7.js"
+  ]
+}
