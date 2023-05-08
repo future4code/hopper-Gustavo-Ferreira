@@ -1,0 +1,15 @@
+# dependências
+node_modules
+
+# next.js
+.next
+fora
+
+# produção
+construir
+
+# cache
+.swc
+
+# arquivos env
+.env
